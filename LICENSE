@@ -1,6 +1,18 @@
-MIT License
+================================================================================
+OPEN-SOURCE DUAL LICENSE & HERITAGE TRADEMARK NOTICE
+Illuminated LED Leyland Scroll Bus Emblem Project
+================================================================================
 
-Copyright (c) 2026 NG1369
+This repository contains both firmware source code and physical hardware/CAD
+documentation. Each category is governed by its respective permissive open-source
+license below, subject to the Historic Trademark & Heritage Notice in Section 3.
+
+--------------------------------------------------------------------------------
+SECTION 1: SOFTWARE & FIRMWARE LICENSE (MIT LICENSE)
+Applies to: /firmware/*.ino and any associated software scripts
+--------------------------------------------------------------------------------
+
+Copyright (c) 2026 Illuminated LED Leyland Scroll Emblem Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +31,49 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+--------------------------------------------------------------------------------
+SECTION 2: PERMISSIVE OPEN HARDWARE LICENSE (MODELED ON CERN-OHL-P v2)
+Applies to: /cad/*.step, /cad/*.dxf, /pcb-bom/*.csv, and /docs/*.pdf
+--------------------------------------------------------------------------------
+
+Copyright (c) 2026 Illuminated LED Leyland Scroll Emblem Contributors
+(Co-engineered with Google Gemini AI Engineering Assistant)
+
+1. Grant of Rights:
+   Subject to the terms of this License and the Trademark Notice in Section 3,
+   any person or organization (including bus enthusiasts, restorers, and
+   transport museums) is granted a worldwide, royalty-free, non-exclusive
+   license to use, copy, modify, fabricate, and distribute the Hardware Design
+   Sources and resulting physical assemblies.
+
+2. Conditions:
+   a) Attribution: You must retain this license notice and credit the original
+      contributors when redistributing the Design Sources or modified versions.
+   b) Marking of Modifications: If you modify the CAD geometry, PCB layout, or
+      BOM, you must clearly indicate that changes were made and date them.
+
+3. Disclaimer of Hardware Warranty & Automotive Safety Notice:
+   THE HARDWARE DESIGN SOURCES AND PHYSICAL PRODUCTS ARE PROVIDED "AS IS"
+   WITHOUT WARRANTY OF ANY KIND. Builders and installers assume full
+   responsibility for verifying electrical fusing (2A inline fuse), IP67
+   waterproofing integrity, thermal clearance, and compliance with local road
+   vehicle lighting regulations before operating on public highways.
+
+--------------------------------------------------------------------------------
+SECTION 3: HISTORIC TRADEMARK & HERITAGE ATTRIBUTION NOTICE
+--------------------------------------------------------------------------------
+
+"Leyland", "Leyland Bus", and the classic cursive Leyland scroll emblem are
+trademarks and heritage intellectual property of their respective owners and
+successors (including Volvo Buses, British Motor Heritage / British Motor
+Industry Heritage Trust, PACCAR / Leyland Trucks, and Ashok Leyland).
+
+The open-source grants in Sections 1 and 2 cover only the original electronic
+circuitry, PCB layout, 3D housing engineering, firmware, and documentation.
+The Leyland cursive script outline is included strictly for non-commercial
+heritage preservation, personal classic bus restoration, educational exhibits,
+and museum displays. Any commercial manufacture or sale of trademarked emblems
+is not authorized by this open-source license and requires permission from the
+relevant trademark owners.
+================================================================================
