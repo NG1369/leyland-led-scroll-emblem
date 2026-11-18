@@ -1,0 +1,23 @@
+Designator,Quantity,Comment,Footprint,Manufacturer,Manufacturer Part Number,LCSC Part Number,Subsystem,Max Height (mm),Assembly Notes
+D1-D84,84,SK6812-2020-WWA Addressable Micro-LED (Warm/Cool/Amber),LED_SMD:LED_2020_Metric,OPSCO Optoelectronics,SK6812-2020-WWA,C2890039,Top LED Matrix,0.9,Mount on top PCB face along cursive Leyland stroke centerline
+U1,1,ESP32-C3FH4 Wi-Fi & BLE SoC (4MB Embedded Flash),Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm,Espressif Systems,ESP32-C3FH4,C2858491,PKT-1 (L Spine),0.9,Bottom PCB face inside PKT-1; connect thermal pad to GND via array
+Y1,1,40.000 MHz +/-10ppm SMD Crystal,Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm,Seiko Epson,FA-2016AN 40.0000MF12Z-W3,C2843043,PKT-1 (L Spine),0.55,Place within 3mm of ESP32-C3FH4 XTAL_P / XTAL_N pins
+U3,1,3.3V 600mA Low-Dropout Linear Regulator,Package_TO_SOT_SMD:SOT-23-5,Diodes Incorporated,AP2112K-3.3TRG1,C51118,PKT-1 (L Spine),1.1,Steps 5.0V rail down to clean 3.3V for ESP32-C3 and SYN480R
+U6,1,Single Bus Buffer Gate 3.3V-to-5V Level Shifter,Package_TO_SOT_SMD:SOT-23-5,Texas Instruments,SN74AHCT1G125DBVR,C11819,PKT-1 (L Spine),1.1,Boosts GPIO4 3.3V data signal to 5.0V for D1 SK6812 DIN
+R2,1,330 Ohm 1% 0.1W Thick Film Resistor,Resistor_SMD:R_0603_1608Metric,YAGEO,RC0603FR-07330RL,C23138,PKT-1 (L Spine),0.45,Series impedance matching resistor between U6 output and D1 DIN
+U4,1,433.92 MHz ASK/OOK Superheterodyne RF Receiver IC,Package_SO:SOP-8_3.9x4.9mm_P1.27mm,Synoxo,SYN480R,C2687784,PKT-2 (L Loop),1.75,Align RF input trace directly over RF-WIN epoxy window
+Y2,1,6.7458 MHz RF Reference Crystal,Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm,Abracon LLC,ABM8G-6.7458-18-D2Y-T,C2895512,PKT-2 (L Loop),0.8,Reference oscillator for SYN480R 433.92 MHz demodulation
+C_ANT1,1,3.3 pF 50V C0G/NP0 RF Matching Capacitor,Capacitor_SMD:C_0603_1608Metric,Murata Electronics,GRM1885C1H3R3CA01D,C1655,PKT-2 (RF-WIN),0.8,Series antenna matching cap for etched 433 MHz meander trace
+U2,1,36V 0.6A 2MHz Synchronous Step-Down Buck Converter,Package_TO_SOT_SMD:TSOT-23-6,Monolithic Power Systems,MP2451DJ-LF-Z,C14259,PKT-3 (e-y Bridge),1.1,Converts 9V-36V bus input to 5.0V LED rail; place thermal vias under GND
+L1,1,10 uH 1.9A Shielded Molded Power Inductor,Inductor_SMD:L_Coilcraft_XAL4020,Coilcraft,XAL4020-103MEB,C2847952,PKT-3 (e-y Bridge),2.0,Low-profile 2.0mm height power choke for MP2451 SW node
+D_FREE,1,40V 1A Schottky Catch Diode,Diode_SMD:D_SOD-123F,onsemi,MBR140SFT1G,C178436,PKT-3 (e-y Bridge),1.1,Freewheeling Schottky diode close to MP2451 SW and GND pins
+R_FB1,1,52.3 kOhm 1% 0.1W Thick Film Resistor,Resistor_SMD:R_0603_1608Metric,YAGEO,RC0603FR-0752K3L,C23196,PKT-3 (e-y Bridge),0.45,Upper feedback divider resistor setting VOUT = 5.0V
+R_FB2,1,10.0 kOhm 1% 0.1W Thick Film Resistor,Resistor_SMD:R_0603_1608Metric,YAGEO,RC0603FR-0710KL,C25804,PKT-3 (e-y Bridge),0.45,Lower feedback divider resistor to GND
+C_OUT1-C_OUT4,4,47 uF 10V X5R 20% 1210 MLCC Capacitor,Capacitor_SMD:C_1210_3225Metric,Murata Electronics,GRM32ER61A476KE15L,C16780,PKT-3 (e-y Bridge),2.5,Parallel MLCC bank providing low-ESR 5V bulk storage for LED sweep
+F1,1,30V/36V 1.5A Hold Resettable PTC Fuse,Fuse:Fuse_1812_4532Metric,Littelfuse,1812L150/30DR,C182450,PKT-4 (a Bowl),1.1,Primary overcurrent protection on +12V/24V automotive input
+D_REV,1,40V 3.0A Schottky Barrier Rectifier,Diode_SMD:D_SMA,Vishay General Semiconductor,SS34-E3/57T,C8678,PKT-4 (a Bowl),2.2,Series reverse-polarity protection diode after PTC fuse F1
+TVS1,1,33V Bidirectional 600W TVS Surge Diode,Diode_SMD:D_SMB,Littelfuse,SMBJ33CA,C18094,PKT-4 (a Bowl),2.4,Clamps 24V bus alternator load-dump voltage transients
+C_IN1-C_IN3,3,10 uF 50V X7R 10% 1210 MLCC Capacitor,Capacitor_SMD:C_1210_3225Metric,TDK Corporation,C3225X7R1H106K250AC,C15849,PKT-4 (a Bowl),2.5,High-voltage 50V rated input buffer bank for 24V bus systems
+U5,1,1-Channel Phototransistor Optocoupler 5000Vrms,Package_SO:SOP-4_4.4x2.6mm_P1.27mm,Lite-On Inc.,LTV-817S-TA1-A,C7821,PKT-5 (n-d Stem),2.1,Opto-isolates 12V/24V side-light sense line from ESP32 GPIO6
+R1,1,4.7 kOhm 1% 0.25W Thick Film Resistor,Resistor_SMD:R_1206_3216Metric,Vishay Dale,CRCW12064K70FKEA,C17936,PKT-5 (n-d Stem),0.6,Current-limiting resistor for U5 optocoupler LED at up to 32V
+C_DEC1-C_DEC8,8,100 nF (0.1 uF) 50V X7R 0603 Decoupling Capacitor,Capacitor_SMD:C_0603_1608Metric,Murata Electronics,GRM188R71H104KA93D,C14663,PKT-1 / PKT-2 / PKT-3,0.8,"Place adjacent to VCC/VDD pins of U1, U2, U3, U4, and U6"
